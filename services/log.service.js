@@ -1,11 +1,11 @@
 import chalk from 'chalk'
 
-const printError = () => {
-    console.log(chalk.bgRed(' ERROR ') + error())
+const printError = (message) => {
+    console.log(chalk.bgRed(' ERROR ') + '\n' + '-> ' + message)
 }
 
 const printSuccess = (message) => {
-    console.log(chalk.bgGreen(' SUCCESS ') + error())
+    console.log(chalk.bgGreen(' SUCCESS ') + '\n' + '-> ' + message)
 } 
 
 const printHelp = () => {
@@ -13,7 +13,7 @@ const printHelp = () => {
         `${chalk.bgCyan('HELP')}
         -c [CITY]    --- Setup city
         -h           --- For help print
-        -t [API_KEY] --- Save token 
+        -t [TOKEN_API_KEY] --- Save token 
         `
     )
 }
